@@ -66,7 +66,7 @@ $ht1.='</style>'.CRLF;
 $ht1.='</head>'.CRLF;
 $ht1.='<body>'.CRLF;
 $ht1.='<div id="description">'.CRLF;
-// on met toutes les icones svg ici avec un display:none
+// on met toutes les icones svg ici avec un display:none . ici, ce n'est qu'un exemple qui n'est pas utilisé
 $ht1.='<svg id="mySVG" style="display:none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">'.CRLF;
 $ht1.='<g id="bac1"><path stroke="blue" stroke-width="12" fill-opacity="1" fill="none" d="M 30 20 A35 35 0 1 0 70 20  M 68 41 L 66 19 L 90 20"></path></g>'.CRLF;
 $ht1.='</svg>'.CRLF;

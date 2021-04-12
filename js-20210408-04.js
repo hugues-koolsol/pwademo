@@ -68,7 +68,7 @@ function ks4(initObject){
  var dts=dtStartLoad1.getTime(); 
  
  if(loch1){ // en localhost
-  waitingTimeReload=1000*60*1; // toutes les minutes 
+  waitingTimeReload=1000*60*10; // toutes les 10 minutes par exemple en localhost. pour la mise au point, on peut passer à toutes les minutes
   waitingTimeVersion=waitingTimeReload-28000; // précédent - 28 secondes
  }
 
@@ -626,7 +626,7 @@ function ks4(initObject){
   majDate1();
   majHeure1();
   setTimeout(checkVersion,10000); // on attend 10 secondes avant de faire la première vérification de la version car
-                                  // il faut un peu de temps pour que l'event install dans le sw soit appelé et on commence par faire un claim() ( 
+                                  // il faut un peu de temps pour que l'event install dans le sw soit appelé et on commence par faire un claim()
  }
  //============================================================================================================================================
  //============================================================================================================================================
@@ -654,6 +654,7 @@ if(init1.loch1){
 }
 if('serviceWorker' in navigator){
  navigator.serviceWorker.register(swChain).then(function(reg){
+  // message reçu du service worker
   navigator.serviceWorker.addEventListener('message', event => {
     if(event.data.loch1){
      console.log('\n\n===================\nevent received from sw\nevent=',event,'\n\nevent.data=',event.data,'\n=============\n');
